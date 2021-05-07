@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MensajeroModel\MensajeroModel.csproj">
+      <Project>{5689cd5e-b62f-4a7b-8d96-30ab5e380da6}</Project>
+      <Name>MensajeroModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

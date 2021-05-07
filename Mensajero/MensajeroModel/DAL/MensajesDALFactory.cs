@@ -8,5 +8,9 @@ namespace MensajeroModel.DAL
 {
     public class MensajesDALFactory
     {
+        public static IMensajesDAL CreateDal()
+        {
+            return MensajesDALArchivos.GetInstancia();
+        }
     }
 }

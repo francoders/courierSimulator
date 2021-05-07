@@ -10,9 +10,25 @@ namespace MensajeroModel.DAL
 {
     public class MensajesDALArchivos : IMensajesDAL
     {
-        // Path.DirectorySeparatorChar remplaza el / (slash)
+        //Singleton: Una Instancia de esta clase por programa.-
+        //1. Un constructor privado
+        private MensajesDALArchivos()
+        {
+
+        }
+        //2. Una referencia estatica a si mismo
+        private static IMensajesDAL instancia;
+        //3. Un metodo estatico que sea el unico que permite acceder a la instancia
+        public static IMensajesDAL GetInstancia()
+        {
+            if (instancia == null)
+                instancia = new MensajesDALArchivos();
+            return instancia;    
+        }
+
+
         private string archivo = Directory.GetCurrentDirectory()
-            + Path.DirectorySeparatorChar + "mensajes.csv";
+            + Path.DirectorySeparatorChar + "mensajes.csv";//Path.DirectorySeparatorChar = Slash
 
         public List<Mensaje> GetAll()
         {
