@@ -13,7 +13,7 @@ Al enviar el mensaje, debe recibir el nombre del remitente, el mensaje y el tipo
 
 Al efectuar el ingreso de los datos, debe ingresar una nueva fila en un fichero llamado mensajes.txt dentro del directorio del servidor
 
-#Ver Mensajes Enviados:
+# Ver Mensajes Enviados:
 
 Debe mostrar los mensajes existentes por pantalla.
 La aplicación debe poseer dos interfaces de comunicación:
